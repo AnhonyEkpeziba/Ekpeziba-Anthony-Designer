@@ -1,0 +1,212 @@
+<!-- contact.html - Contact Page -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Designer - Contact Us</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#c47a3f',
+                        secondary: '#2c3e50',
+                        accent: '#e67e22',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .nav-link { transition: color 0.3s ease; }
+        .nav-link:hover { color: #c47a3f !important; }
+        .contact-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px -15px rgba(0,0,0,0.15);
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #c47a3f;
+            ring: 2px solid #c47a3f;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+
+    <div class="loader">
+        <svg width="50px" height="50px" viewBox="0 0 24 30">
+            <rect x="0" y="10" width="4" height="10" fill="#c47a3f"><animate attributeName="opacity" values="0.2;1;.2" dur="0.8s" repeatCount="indefinite"/></rect>
+            <rect x="8" y="10" width="4" height="10" fill="#c47a3f"><animate attributeName="opacity" values="0.2;1;.2" begin="0.15s" dur="0.8s" repeatCount="indefinite"/></rect>
+            <rect x="16" y="10" width="4" height="10" fill="#c47a3f"><animate attributeName="opacity" values="0.2;1;.2" begin="0.3s" dur="0.8s" repeatCount="indefinite"/></rect>
+        </svg>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-md z-50 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-secondary"><span class="text-primary">Designer</span> Studio</a>
+            <button id="mobileMenuBtn" class="lg:hidden text-gray-600 text-2xl"><i class="fas fa-bars"></i></button>
+            <div class="hidden lg:flex space-x-8">
+                <a href="index.html" class="nav-link text-gray-500 hover:text-primary">Home</a>
+                <a href="about.html" class="nav-link text-gray-500 hover:text-primary">About</a>
+                <a href="explore.html" class="nav-link text-gray-500 hover:text-primary">Explore</a>
+                <a href="trending.html" class="nav-link text-gray-500 hover:text-primary">Trending</a>
+                <a href="contact.html" class="nav-link text-secondary font-medium hover:text-primary">Contact</a>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden lg:hidden bg-white shadow-lg py-4 px-6">
+            <a href="index.html" class="block py-2 text-gray-500">Home</a>
+            <a href="about.html" class="block py-2 text-gray-500">About</a>
+            <a href="explore.html" class="block py-2 text-gray-500">Explore</a>
+            <a href="trending.html" class="block py-2 text-gray-500">Trending</a>
+            <a href="contact.html" class="block py-2 text-secondary font-medium">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Page Banner -->
+    <section class="pt-32 pb-20 bg-gradient-to-r from-secondary to-secondary/90 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-white"><span class="text-primary">Contact</span> Us</h2>
+            <p class="text-gray-200 max-w-2xl mx-auto mt-4">Reach us on the various platforms provided below. There is a 10% discount for the first 40 people to apply.</p>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="rounded-2xl overflow-hidden shadow-xl h-96">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3100.5618166959785!2d7.043811873640459!3d4.881811840063687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069d25ec514fa5b%3A0x58ea707ad0ca52cf!2sRumuewhara%20New%20Layout%20Rd%2C%20Obio%2FAkpor%20500102%2C%20Rivers!5e1!3m2!1sen!2sng!4v1737389427368!5m2!1sen!2sng" class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Info -->
+    <section class="py-12 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12">
+                
+                <!-- Contact Form -->
+                <div class="bg-gray-50 rounded-2xl p-8 shadow-lg">
+                    <h2 class="text-2xl md:text-3xl font-bold text-secondary mb-6">Don't Be Hesitated <span class="text-primary">Send a Message Now!</span></h2>
+                    <form action="https://formsubmit.co/tonybobosco@gmail.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+                        
+                        <div class="grid md:grid-cols-2 gap-4 mb-4">
+                            <input type="text" name="first-name" placeholder="First Name*" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary transition">
+                            <input type="text" name="last-name" placeholder="Last Name*" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary transition">
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4 mb-4">
+                            <input type="email" name="email" placeholder="Your Email*" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary transition">
+                            <input type="text" name="subject" placeholder="Subject*" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary transition">
+                        </div>
+                        <textarea name="message" rows="6" placeholder="Message*" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary transition mb-4"></textarea>
+                        <button type="submit" class="w-full bg-primary text-white py-3 rounded-full font-semibold hover:bg-accent transition shadow-md">Send Message</button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                    <div class="contact-card bg-gray-50 rounded-2xl p-6 flex items-start gap-4">
+                        <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-2xl text-primary"></i>
+                        </div>
+                        <div>
+                            <h6 class="text-lg font-bold text-secondary mb-1">Address</h6>
+                            <span class="text-gray-500">Rhumuewhara, Port Harcourt, Rivers State, Nigeria</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card bg-gray-50 rounded-2xl p-6 flex items-start gap-4">
+                        <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-envelope text-2xl text-primary"></i>
+                        </div>
+                        <div>
+                            <h6 class="text-lg font-bold text-secondary mb-1">Email Address</h6>
+                            <span class="text-gray-500">tonybobosco@gmail.com</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card bg-gray-50 rounded-2xl p-6 flex items-start gap-4">
+                        <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-comment-dots text-2xl text-primary"></i>
+                        </div>
+                        <div>
+                            <h6 class="text-lg font-bold text-secondary mb-1">Chat With Us</h6>
+                            <span class="text-gray-500">tonybobosco@gmail.com</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card bg-gray-50 rounded-2xl p-6 flex items-start gap-4">
+                        <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-phone-alt text-2xl text-primary"></i>
+                        </div>
+                        <div>
+                            <h6 class="text-lg font-bold text-secondary mb-1">Phone Numbers</h6>
+                            <span class="text-gray-500 block">(+234) 7059884528</span>
+                            <span class="text-gray-500">(+234) 9039772191</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <h2 class="text-2xl md:text-3xl font-bold text-white">Hire us to Work on a Project?</h2>
+                <a href="contact.html" class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg">Contact Us Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div><img src="assets/images/footer-logo.png" alt="Logo" class="mb-4"><p class="text-gray-300 text-sm">Contact us for our amazing promo prices. The earlier the more discount opportunities you'll have.</p></div>
+                <div><h4 class="text-lg font-bold mb-4">Our Location</h4><p class="text-gray-300">Rhumuewhara, Port Harcourt, Rivers State</p></div>
+                <div><h4 class="text-lg font-bold mb-4">Customer Care</h4><ul class="space-y-2 text-gray-300"><li><a href="tel:+2347059884528">(+234) 7059884528</a></li><li><a href="tel:+2349039772191">(+234) 9039772191</a></li><li><a href="mailto:tonybobosco@gmail.com">tonybobosco@gmail.com</a></li></ul></div>
+                <div><h4 class="text-lg font-bold mb-4">Follow Us</h4><div class="flex space-x-4"><a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition"><i class="fab fa-facebook-f"></i></a><a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition"><i class="fab fa-twitter"></i></a><a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition"><i class="fab fa-linkedin-in"></i></a></div></div>
+            </div>
+            <div class="border-t border-white/20 mt-8 pt-8 text-center text-gray-400 text-sm"><p>Copyright © 2024 Anthony Tamarauseri Ekpeziba. All Rights Reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        setTimeout(function() { $('.loader').fadeOut(); }, 1500);
+        $('#mobileMenuBtn').click(function() { $('#mobileMenu').toggleClass('hidden'); });
+    </script>
+</body>
+
+</html>
